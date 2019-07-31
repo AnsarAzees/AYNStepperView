@@ -28,7 +28,6 @@ class _AYNStepperViewState extends State<AYNStepperView> {
   Widget build(BuildContext context) {
     return AnimatedContainer(
       width: 50,
-      transform: Matrix4.translationValues(18, 0, 0),
       decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(25),
           boxShadow: [

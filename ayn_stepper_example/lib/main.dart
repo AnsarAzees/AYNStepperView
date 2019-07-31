@@ -8,6 +8,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      debugShowCheckedModeBanner: false,
       title: 'Flutter Demo',
       theme: ThemeData(
         // This is the theme of your application.
@@ -21,7 +22,9 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(),
+      home: MyHomePage(
+        title: "AYN Stepper View",
+      ),
     );
   }
 }
@@ -83,6 +86,7 @@ class _MyHomePageState extends State<MyHomePage> {
         // in the middle of the parent.
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          crossAxisAlignment: CrossAxisAlignment.center,
           children: <Widget>[
             AYNStepperView(
               count: _counter,
@@ -93,8 +97,11 @@ class _MyHomePageState extends State<MyHomePage> {
                 });
               },
             ),
-            Text(
-              'You have pushed the button this many times:',
+            Padding(
+              padding: const EdgeInsets.only(top: 25),
+              child: Text(
+                'You have pushed the button this many times:',
+              ),
             ),
             Text(
               '$_counter',
@@ -103,11 +110,7 @@ class _MyHomePageState extends State<MyHomePage> {
           ],
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }

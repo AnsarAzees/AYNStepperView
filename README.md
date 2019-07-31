@@ -1,14 +1,26 @@
 # ayn_stepper
 
-A new Flutter package.
+A fully customizable Flutter Widget to get count. It can be applicable in e-commerce apps for getting cart count.
 
-## Getting Started
+![Active](assets/IMG-0801.PNG)
 
-This project is a starting point for a Dart
-[package](https://flutter.dev/developing-packages/),
-a library module containing code that can be shared easily across
-multiple Flutter or Dart projects.
 
-For help getting started with Flutter, view our 
-[online documentation](https://flutter.dev/docs), which offers tutorials, 
-samples, guidance on mobile development, and a full API reference.
+## Using
+Create a widget to load and edit an image:
+```dart
+Widget _buildStepper() {
+  return AYNStepperView(
+               count: _counter,
+               activeForegroundColor: Colors.purple,
+               didChangeCount: (count) {
+               setState(() {
+                _counter = count;
+               });
+             },
+          );
+}
+
+
+```
+
+
